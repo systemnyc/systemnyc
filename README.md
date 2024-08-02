@@ -12,19 +12,18 @@
   - [Description](https://github.com/systemnyc/{githubpage})
 - <b>C# (.NET Desktop Applications)</b>
   - [Description](https://github.com/systemnyc/{githubpage})
-- 
-
+  
 <h2> 🤳 Connect with me:</h2>
 
-[<img align="left" alt="{name} | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="{name} | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="name | Linked n" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="name | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
+- [<img align="left" alt="{name} | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
+- [<img align="left" alt="{name} | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+- [<img align="left" alt="name | Linked n" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+- [<img align="left" alt="name | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
 
-[twitter]: https://twitter.com/{name}
-[youtube]: https://www.youtube.com/c/{name}
-[instagram]: https://www.instagram.com/{name}/
-[linkedin]: https://linkedin.com/in/charlesvasquez-nyc
+- [twitter]: https://twitter.com/{name}
+- [youtube]: https://www.youtube.com/c/{name}
+- [instagram]: https://www.instagram.com/{name}/
+- [linkedin]: https://linkedin.com/in/charlesvasquez-nyc
 
 <!--
 **systemnyc/systemnyc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
