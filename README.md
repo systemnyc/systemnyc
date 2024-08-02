@@ -10,7 +10,7 @@
 - <b>Full Stack Development (Tech)</b>
   - [Description](https://github.com/systemnyc/{githubpage})
 - <b>PowerShell</b>
-  - [Description](https://github.com/systemnyc/{githubpage})
+  - [Powershell Scripts for AD User Administration and Workstaton Task](https://github.com/systemnyc/PowerShell/tree/master)
 - <b>C# (.NET Desktop Applications)</b>
   - [Description](https://github.com/systemnyc/{githubpage})
   
