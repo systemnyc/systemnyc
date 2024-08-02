@@ -1,4 +1,4 @@
-<h1>Hi, I'm Charles! <br/><a href="https://github.com/systemnyc">Programmer</a> - <a href="https://replit.com/@cvasquez39"></a><a href="https://www.linkedin.com/in/{name}/">IT Professional</a>
+<h1>Hi, I'm Charles!<a href="https://www.linkedin.com/in/{name}/"> IT Professional</a>, and <br/><a href="https://github.com/systemnyc">Programmer</a> - <a href="https://replit.com/@cvasquez39"></a>
 
 <h2>👨‍💻 Software Development Projects:</h2>
 
@@ -15,21 +15,22 @@
   
 <h2> 🤳 Connect with me:</h2>
 
-- [<img align="left" alt="{name} | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-- [<img align="left" alt="{name} | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-- [<img align="left" alt="name | Linked n" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-- [<img align="left" alt="name | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
 
-- [twitter]: https://twitter.com/{name}
-- [youtube]: https://www.youtube.com/c/{name}
-- [instagram]: https://www.instagram.com/{name}/
-- [linkedin]: https://linkedin.com/in/charlesvasquez-nyc
+[<img align="left" alt="name | Replit" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/7/78/New_Replit_Logo.svg" />][replit]
+[<img align="left" alt="name | Linked n" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="{name} | X" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/X_Twitter_icon.svg" />][X]
+<!-- [<img align="left" alt="{name} | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube] -->
+<!-- [<img align="left" alt="name | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram] -->
 
+  [replit]: https://replit.com/@cvasquez39  
+  [linkedin]: https://linkedin.com/in/charlesvasquez-nyc  
+  [X]: https://X.com/system_nyc
+  <!-- [youtube]: https://www.youtube.com/c/{name} -->
+  <!-- [instagram]: https://www.instagram.com/{name}/-->
 <!--
 **systemnyc/systemnyc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
-
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
