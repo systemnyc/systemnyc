@@ -1,4 +1,5 @@
-<h1>Hi, I'm Charles!<a href="https://www.linkedin.com/in/{name}/"> IT Professional</a>, and <br/><a href="https://github.com/systemnyc">Programmer</a> - <a href="https://replit.com/@cvasquez39"></a>
+<h1>Hi, I'm Charles!</br><a href="https://www.linkedin.com/in/charlesvasquez-nyc/">IT Professional</a>, and <a href="https://github.com/systemnyc">Programmer</a><a href="https://replit.com/@cvasquez39"></a></h1>
+
 
 <h2>👨‍💻 Software Development Projects:</h2>
 
