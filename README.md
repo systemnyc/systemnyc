@@ -24,7 +24,7 @@
 [twitter]: https://twitter.com/{name}
 [youtube]: https://www.youtube.com/c/{name}
 [instagram]: https://www.instagram.com/{name}/
-[linkedin]: https://linkedin.com/in/{name}
+[linkedin]: https://linkedin.com/in/charlesvasquez-nyc
 
 <!--
 **systemnyc/systemnyc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
