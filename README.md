@@ -1,20 +1,24 @@
 <h1>Hi, I'm Charles!</br><a href="https://www.linkedin.com/in/charlesvasquez-nyc/">IT Professional</a>, and <a href="https://github.com/systemnyc">Programmer</a><a href="https://replit.com/@cvasquez39"></a></h1>
 
+<b>- 🔭 I’m currently working on ../b>
+- Google IT Automation with Python
+- Harvard University CS50P Introduction to Python Programming
+- PCEP – Certified Entry-Level Python Programmer certification
+  
+<h2>Coding & Scripting Projects:</h2>
 
-<h2>👨‍💻 Programming/Coding/Scripting Projects:</h2>
-
-- <b>Title</b>
+<!-- - <b>Title</b>
+  - [Description](https://github.com/systemnyc/{githubpage}) -->
+-<b>Python</b>
   - [Description](https://github.com/systemnyc/{githubpage})
-  <b>Python</b>
-  - [Description](https://github.com/systemnyc/{githubpage})
-- <b>Full Stack Development (Tech)</b>
-  - [Description](https://github.com/systemnyc/{githubpage})
+-<!--  <b>Full Stack Development (Tech)</b>
+  - [Description](https://github.com/systemnyc/{githubpage}) -->
 - <b>PowerShell</b>
   - [Powershell Scripts for AD User Administration and Workstaton Task](https://github.com/systemnyc/PowerShell/tree/master)
-- <b>C# (.NET Desktop Applications)</b>
-  - [Description](https://github.com/systemnyc/{githubpage})
+<!-- - <b>C# (.NET Desktop Applications)</b>
+  - [Description](https://github.com/systemnyc/{githubpage}) -->
   
-<h2> 🤳 Connect with me:</h2>
+<h2> Connect with me:</h2>
 
 
 [<img align="left" alt="name | Replit" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/7/78/New_Replit_Logo.svg" />][replit]
