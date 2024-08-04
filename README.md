@@ -1,47 +1,46 @@
-<h1>Hi, I'm Charles!</br><a href="https://www.linkedin.com/in/charlesvasquez-nyc/">IT Professional</a>, and <a href="https://github.com/systemnyc">Programmer</a><a href="https://replit.com/@cvasquez39"></a></h1>
+# **Charles Vasquez**
 
-<b>- 🔭 I’m currently working on ../b>
-- Google IT Automation with Python
-- Harvard University CS50P Introduction to Python Programming
-- PCEP – Certified Entry-Level Python Programmer certification
-  
-<h2>Coding & Scripting Projects:</h2>
+[![Linkedin Badge](https://img.shields.io/badge/-CharlesVasquez-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/charlesvasquez-nyc/)](https://www.linkedin.com/in/charlesvasquez-nyc/) [![GitHub systemnyc](https://img.shields.io/github/followers/systemnyc?label=follow&style=social)](https://github.com/systemnyc) [![Replit Badge](https://img.shields.io/badge/-@cvasquez39-768692?style=flat-square&logo=Replit&logoColor=white&link=https://replit.com/@cvasquez39)](https://replit.com/@cvasquez39)
 
-<!-- - <b>Title</b>
-  - [Description](https://github.com/systemnyc/{githubpage}) -->
--<b>Python</b>
-  - [Description](https://github.com/systemnyc/{githubpage})
--<!--  <b>Full Stack Development (Tech)</b>
-  - [Description](https://github.com/systemnyc/{githubpage}) -->
-- <b>PowerShell</b>
-  - [Powershell Scripts for AD User Administration and Workstaton Task](https://github.com/systemnyc/PowerShell/tree/master)
-<!-- - <b>C# (.NET Desktop Applications)</b>
-  - [Description](https://github.com/systemnyc/{githubpage}) -->
-  
-<h2> Connect with me:</h2>
+--- 
+## **IT Professional on the Path to Automation Mastery**
+
+Driven IT professional committed to building a career in automation engineering. Leveraging my experience in IT infrastructure and my passion for learning, I'm actively developing the skills to streamline processes and create efficient solutions.
+
+---
+
+## **Core Strengths**
+
+- **Cloud Infrastructure Fundamentals:** Solid foundation in cloud architecture and administration.
+- **Scripting & Automation Aptitude:** Proven ability to automate tasks using Python and PowerShell.
+- **Eagerness to Learn & Adapt:** Constantly seeking new knowledge and opportunities to grow in the automation space.
+
+## **Technical Toolbox**
+
+[![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![PowerShell](https://img.shields.io/badge/-PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)](https://docs.microsoft.com/en-us/powershell/)
+[![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
+[![Google Cloud Platform](https://img.shields.io/badge/-GoogleCloudPlatform-4285F4?style=flat-square&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
 
 
-[<img align="left" alt="name | Replit" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/7/78/New_Replit_Logo.svg" />][replit]
-[<img align="left" alt="name | Linked n" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="{name} | X" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/X_Twitter_icon.svg" />][X]
-<!-- [<img align="left" alt="{name} | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube] -->
-<!-- [<img align="left" alt="name | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram] -->
+## **Current Focus**
 
-  [replit]: https://replit.com/@cvasquez39  
-  [linkedin]: https://linkedin.com/in/charlesvasquez-nyc  
-  [X]: https://X.com/system_nyc
-  <!-- [youtube]: https://www.youtube.com/c/{name} -->
-  <!-- [instagram]: https://www.instagram.com/{name}/-->
-<!--
-**systemnyc/systemnyc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- **Upskilling in Python:** Actively engaged in Harvard's CS50P course to master Python programming.
+- **Pursuing Certifications:** Working towards PCEP certification for Python and planning for PMI PMP certification.
+- **Building Automation Portfolio:** Developing and refining projects that demonstrate my growing automation capabilities.
 
-Here are some ideas to get you started:
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## **Python Projects**
+
+- **Reading & Writing CSV Files:** Efficiently manipulating and analyzing structured data. ([Replit](https://replit.com/@cvasquez39/Reading-and-Writing-CSV-with-Dictionaries))
+- **Test Environment Setup & File Management:** Scripting the automated setup of testing environments. ([Replit](https://replit.com/@cvasquez39/File-Mover#main.py)) 
+
+## **PowerShell Projects**
+- **Powershell Scripts for AD User Administration and Workstaton Task:** Managing Active Directory users and automating routine workstation tasks. (Explore on [GitHub](https://github.com/systemnyc/PowerShell/tree/master))
+
+---
+
+## **Let's Connect**
+
+- 💼 **LinkedIn:** https://www.linkedin.com/in/charlesvasquez-nyc/
+- 👨‍💻 **Replit:** https://replit.com/@cvasquez39
+- 🐦 **X (Twitter):** https://x.com/system_nyc
