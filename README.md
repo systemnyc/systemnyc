@@ -1,14 +1,17 @@
-# **Charles Vasquez**
+## **Charles Vasquez**
 
 [![Linkedin Badge](https://img.shields.io/badge/-CharlesVasquez-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/charlesvasquez-nyc/)](https://www.linkedin.com/in/charlesvasquez-nyc/) [![GitHub systemnyc](https://img.shields.io/github/followers/systemnyc?label=follow&style=social)](https://github.com/systemnyc) [![Replit Badge](https://img.shields.io/badge/-@cvasquez39-768692?style=flat-square&logo=Replit&logoColor=white&link=https://replit.com/@cvasquez39)](https://replit.com/@cvasquez39)
 
----
+
 
 ## **IT Professional on the Path to Automation Mastery**
 
 Driven IT professional committed to building a career in automation engineering. Leveraging my experience in IT infrastructure and my passion for learning, I'm actively developing the skills to streamline processes and create efficient solutions.
 
----
+
+## **Certifications**
+
+- **Crash Course on Python:** https://www.coursera.org/account/accomplishments/verify/HNBJZZ7ADWT6
 
 ## **Core Strengths**
 
@@ -32,7 +35,7 @@ Driven IT professional committed to building a career in automation engineering.
 - **Azure Expertise:** Expanding my skills in Azure AD, Intune, and SCCM for comprehensive cloud infrastructure management.
 
 ## **Python Projects**
-
+- **Current Directory and File List:** Diplay list directories and files under current directory ([Replit](https://replit.com/@cvasquez39/basic-directory-listing?v=1)
 - **Reading & Writing CSV Files:** Efficiently manipulating and analyzing structured data. ([Replit](https://replit.com/@cvasquez39/Reading-and-Writing-CSV-with-Dictionaries))
 - **Test Environment Setup & File Management:** Scripting the automated setup of testing environments. ([Replit](https://replit.com/@cvasquez39/File-Mover#main.py)) 
 
