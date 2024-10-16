@@ -12,6 +12,8 @@ Driven IT professional committed to building a career in automation engineering.
 ## **Certifications**
 
 - **Crash Course on Python:** https://www.coursera.org/account/accomplishments/verify/HNBJZZ7ADWT6
+- **Using Python to Interact with the Operating System:** https://www.coursera.org/account/accomplishments/verify/16I129I403AS
+- **Foundations of Cybersecurity:** https://www.coursera.org/account/accomplishments/verify/V9MXHW3VD7SH
 
 ## **Core Strengths**
 
