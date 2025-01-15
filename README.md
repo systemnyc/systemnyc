@@ -10,10 +10,10 @@ Driven IT professional committed to building a career in automation engineering.
 
 
 ## **Certifications**
-
-- **Crash Course on Python:** https://www.coursera.org/account/accomplishments/verify/HNBJZZ7ADWT6
-- **Using Python to Interact with the Operating System:** https://www.coursera.org/account/accomplishments/verify/16I129I403AS
+- **Google IT Automation with Python by Google on Coursera:** https://www.coursera.org/account/accomplishments/professional-cert/304T8F49KWIL
 - **Foundations of Cybersecurity:** https://www.coursera.org/account/accomplishments/verify/V9MXHW3VD7SH
+- **Google AI Essentials:** https://www.coursera.org/account/accomplishments/verify/JSYU11W7ETDS
+- **Azure Foundermentails:** https://www.credly.com/badges/089587f2-154d-4c18-bfaf-bf862ae3445e
 
 ## **Core Strengths**
 
