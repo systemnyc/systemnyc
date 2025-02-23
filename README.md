@@ -4,7 +4,7 @@
 
 
 
-## **IT Professional on the Path to Automation Mastery**
+## **IT Professional on the Path to Python coding, AI, and Automation Mastery**
 
 Driven IT professional committed to building a career in automation engineering. Leveraging my experience in IT infrastructure and my passion for learning, I'm actively developing the skills to streamline processes and create efficient solutions.
 
