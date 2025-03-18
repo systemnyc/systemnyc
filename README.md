@@ -38,7 +38,7 @@ Driven IT professional committed to building a career in automation engineering.
 
 ## **Python Projects**
 - **Workstation/OS Health Checkes:** Repo contains scripts to check workstation and OS enviornments (https://github.com/systemnyc/workstation-health-check.git)
-- **Current Directory and File List:** Diplay list directories and files under current directory ([Replit](https://replit.com/@cvasquez39/basic-directory-listing?v=1)
+- **Current Directory and File List:** Diplay list directories and files under current directory ([Replit](https://replit.com/@cvasquez39/basic-directory-listing?v=1))
 - **Reading & Writing CSV Files:** Efficiently manipulating and analyzing structured data. ([Replit](https://replit.com/@cvasquez39/Reading-and-Writing-CSV-with-Dictionaries))
 - **Test Environment Setup & File Management:** Scripting the automated setup of testing environments. ([Replit](https://replit.com/@cvasquez39/File-Mover#main.py)) 
 
