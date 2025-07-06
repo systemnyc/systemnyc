@@ -13,7 +13,7 @@
 Driven IT professional committed to building a career in automation engineering. Leveraging my experience in IT infrastructure and my passion for learning, I'm actively developing the skills to streamline processes and create efficient solutions.
 
 ## **Certifications**
-- ** JAMF Certified Associate:** https://www.credly.com/badges/f848fa03-1ae1-4ccb-8e78-c87018267936/public_url
+- **JAMF Certified Associate:** https://www.credly.com/badges/f848fa03-1ae1-4ccb-8e78-c87018267936/public_url
 - **CompTIA Security+:** https://www.credly.com/badges/4b5a3c44-6660-4f1f-a164-2af098ba633d/linked_in_profile 
 - **Google IT Automation with Python:** https://www.coursera.org/account/accomplishments/professional-cert/304T8F49KWIL
 - **Google AI Essentials:** https://www.coursera.org/account/accomplishments/verify/JSYU11W7ETDS
