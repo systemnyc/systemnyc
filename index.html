@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: The Professional Journey of Charles Vasquez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F8FF; /* Light Blue background from Brilliant Blues palette */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            max-height: 40vh;
+        }
+        .text-shadow {
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .accent-bg { background-color: #007ACC; }
+        .accent-text { color: #007ACC; }
+        .highlight-text { color: #00BFFF; }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold accent-text text-shadow">The Professional Journey of Charles Vasquez</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mt-2">A Full-Stack IT Professional: From Hands-On Support to Strategic Engineering</p>
+        </header>
+
+        <section id="profile" class="mb-16">
+            <div class="card text-center">
+                <h2 class="text-3xl font-bold accent-text mb-4">Professional Profile</h2>
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto">
+                    A highly motivated and adaptable technology professional with **20+ years of experience** spanning enterprise IT support, systems administration, project leadership, and software development. Possesses a unique, multi-disciplinary skill set that bridges the gap between deep technical troubleshooting, modern endpoint engineering, and strategic cybersecurity. A proven problem-solver, driven by a passion for continuous learning and a commitment to using technology to solve complex business challenges.
+                </p>
+            </div>
+        </section>
+
+        <section id="competencies" class="mb-16">
+            <h2 class="text-3xl font-bold accent-text mb-8 text-center">Core Competencies: The Intersection of Expertise</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center -space-y-8 md:-space-y-0 md:-space-x-12">
+                <div class="w-56 h-56 rounded-full flex flex-col justify-center items-center text-white p-4 text-center shadow-lg" style="background-color: #007ACC;">
+                    <h3 class="font-bold text-xl">Endpoint Engineering</h3>
+                    <p class="text-sm mt-1">Intune, JAMF, SCCM<br>Windows & macOS<br>Autopilot, MDM/MAM</p>
+                </div>
+                <div class="w-56 h-56 rounded-full flex flex-col justify-center items-center text-white p-4 text-center shadow-lg" style="background-color: #00BFFF;">
+                    <h3 class="font-bold text-xl">Cybersecurity</h3>
+                    <p class="text-sm mt-1">Security+, Azure AD<br>HIPAA Compliance<br>Data Privacy, DLP</p>
+                </div>
+                <div class="w-56 h-56 rounded-full flex flex-col justify-center items-center text-white p-4 text-center shadow-lg" style="background-color: #005f99;">
+                    <h3 class="font-bold text-xl">Automation & Code</h3>
+                    <p class="text-sm mt-1">PowerShell, Python<br>Java, C#, SQL<br>API Integration</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="journey" class="mb-16">
+            <h2 class="text-3xl font-bold accent-text mb-8 text-center">Career Journey: A Legacy of Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <p class="font-bold highlight-text">2023 - Present</p>
+                    <h3 class="text-xl font-bold mt-1">Healthcare IT & Endpoint Engineering</h3>
+                    <p class="text-gray-600 font-medium">Mount Sinai Health System</p>
+                    <p class="mt-2 text-gray-700">Providing mission-critical Tier 2 support in a clinical environment. Collaborating to improve EPIC payment processing by 95%. Actively cross-training with Endpoint Engineering, contributing to Windows 11 rollout and mastering Intune.</p>
+                </div>
+                <div class="card">
+                    <p class="font-bold highlight-text">2017 - 2022</p>
+                    <h3 class="text-xl font-bold mt-1">IT Leadership & Consulting</h3>
+                    <p class="text-gray-600 font-medium">PCS, LLC & Supremo Foods</p>
+                    <p class="mt-2 text-gray-700">Spearheaded IT operations for 16 grocery stores. Led server upgrades (SQL, POS), implemented ticketing systems, and provided 24/7 global support. Managed vendor licensing and implemented proactive server monitoring.</p>
+                </div>
+                <div class="card">
+                    <p class="font-bold highlight-text">2012 - 2017</p>
+                    <h3 class="text-xl font-bold mt-1">Corporate & Non-Profit IT Mgmt</h3>
+                    <p class="text-gray-600 font-medium">Symphony Space & America's Food Basket</p>
+                    <p class="mt-2 text-gray-700">Maintained diverse infrastructure (Windows/Mac, Exchange, network devices). Implemented security measures, including firewall configuration and botnet remediation. Gained deep experience integrating Macs into a Windows domain.</p>
+                </div>
+                 <div class="card">
+                    <p class="font-bold highlight-text">2006 - 2014</p>
+                    <h3 class="text-xl font-bold mt-1">Foundational Enterprise Experience</h3>
+                    <p class="text-gray-600 font-medium">Columbia & Pace University</p>
+                    <p class="mt-2 text-gray-700">Managed a complex UNIX/Linux/Windows/Mac environment. Implemented a HIPAA-compliant remote solution, saving over $1,000/month. Honed skills in deep system diagnostics, imaging, and user support in a large academic setting.</p>
+                </div>
+                 <div class="card">
+                    <p class="font-bold highlight-text">2004 - 2006</p>
+                    <h3 class="text-xl font-bold mt-1">Research & Public Health</h3>
+                    <p class="text-gray-600 font-medium">The New York Academy of Medicine</p>
+                    <p class="mt-2 text-gray-700">Contributed to impactful public health studies as an Assistant Researcher. Conducted interviews, managed outreach, and oversaw team operations, demonstrating leadership and a commitment to community-focused projects.</p>
+                </div>
+                 <div class="card">
+                    <p class="font-bold highlight-text">2003 - 2011</p>
+                    <h3 class="text-xl font-bold mt-1">Early Career & Development</h3>
+                    <p class="text-gray-600 font-medium">Tutor.com, EmblemHealth & more</p>
+                    <p class="mt-2 text-gray-700">Began career with roles in QA Automation Engineering, learning C# and automated testing frameworks, and IT Support, building the foundation of technical expertise that defines my career.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-16">
+            <h2 class="text-3xl font-bold accent-text mb-8 text-center">Key Projects & Strategic Impact</h2>
+             <div class="space-y-8">
+                <div class="card">
+                    <h3 class="font-bold text-xl accent-text">Windows 11 Device Inventory Script</h3>
+                    <p class="mt-2 text-gray-700"><strong>My Role & Actions:</strong> Developed a PowerShell script using the Microsoft Graph API to automate Intune device reporting.</p>
+                    <p class="mt-2 text-gray-700"><strong>The Business Value:</strong> Reduced manual reporting time significantly and improved the accuracy of compliance data, enabling better security posture management.</p>
+                </div>
+                 <div class="card">
+                    <h3 class="font-bold text-xl accent-text">Technology Upgrade for The Arc of Monmouth</h3>
+                    <p class="mt-2 text-gray-700"><strong>My Role & Actions:</strong> Spearheaded a full modernization project, upgrading network infrastructure and transitioning multiple sites from coaxial to fiber optic internet.</p>
+                    <p class="mt-2 text-gray-700"><strong>The Business Value:</strong> Overcame major logistical hurdles to bring modern, high-speed connectivity to underserved locations, enabling new IP phone systems and future-proofing their technology.</p>
+                </div>
+                <div class="card">
+                    <h3 class="font-bold text-xl accent-text">iMac Hard Drive Failure & Data Recovery</h3>
+                    <p class="mt-2 text-gray-700"><strong>My Role & Actions:</strong> Performed deep hardware and software diagnostics in single-user mode, recovered all critical files to a newly configured Drobo NAS.</p>
+                    <p class="mt-2 text-gray-700"><strong>The Business Value:</strong> Prevented critical data loss for a user, demonstrated expert-level troubleshooting beyond standard tools, and made the correct strategic recommendation to replace the failing hardware.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-16">
+             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Technical Arsenal: A Commitment to Continuous Learning</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                 <div class="card">
+                     <h3 class="text-xl font-bold mb-3">Apple & Jamf</h3>
+                     <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Jamf Certified Associate</span>
+                 </div>
+                 <div class="card">
+                     <h3 class="text-xl font-bold mb-3">Microsoft</h3>
+                     <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Azure Fundamentals</span>
+                      <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Azure AD</span>
+                      <span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">SCCM/Intune</span>
+                 </div>
+                 <div class="card">
+                     <h3 class="text-xl font-bold mb-3">Cybersecurity</h3>
+                      <span class="inline-block bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">CompTIA Security+</span>
+                      <span class="inline-block bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Google Cybersecurity</span>
+                      <span class="inline-block bg-green-100 text-green-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Cisco Security</span>
+                 </div>
+                 <div class="card">
+                     <h3 class="text-xl font-bold mb-3">Automation & Code</h3>
+                      <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Google IT Automation with Python</span>
+                      <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">PowerShell</span>
+                      <span class="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Java</span>
+                 </div>
+                 <div class="card">
+                     <h3 class="text-xl font-bold mb-3">AI & Data</h3>
+                      <span class="inline-block bg-purple-100 text-purple-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Google AI</span>
+                      <span class="inline-block bg-purple-100 text-purple-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">IBM AI & Big Data</span>
+                      <span class="inline-block bg-purple-100 text-purple-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">Explainable AI (XAI)</span>
+                 </div>
+                 <div class="card">
+                    <h3 class="text-xl font-bold mb-3">Legacy & Foundational</h3>
+                    <span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">MCITP</span>
+                    <span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">MCTS</span>
+                    <span class="inline-block bg-gray-100 text-gray-800 text-sm font-medium mr-2 mb-2 px-2.5 py-0.5 rounded-full">C++ / PHP</span>
+                </div>
+             </div>
+        </section>
+
+        <section id="colleagues" class="mb-16">
+            <h2 class="text-3xl font-bold accent-text mb-8 text-center">Voice of Colleagues: A Reputation for Excellence</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card italic border-l-4 border-blue-400">
+                    <p>"Charles is a very **bright, technical mind, who thinks outside of the box.** ...missed the opportunity to bring him on full time. I'm sure he's doing a great job wherever he is, and would be an asset to any IT team."</p>
+                    <p class="text-right font-bold not-italic mt-4 accent-text">— Nora Osman, Former Manager</p>
+                </div>
+                <div class="card italic border-l-4 border-blue-400">
+                     <p>"He approached this challenge the way he did all others; with a **keen mind, careful experimentation, and sheer persistence.** ...Charles was able to overcome each bump in the road in an impressive and timely manner."</p>
+                     <p class="text-right font-bold not-italic mt-4 accent-text">— Russell Greenspan, Former Manager</p>
+                </div>
+                <div class="card italic border-l-4 border-blue-400">
+                    <p>"Charles was always happy to **share his experience with me**, as I was coming in to the field with little practical experience of my own. Charles is a highly skilled and knowledgeable IT professional."</p>
+                     <p class="text-right font-bold not-italic mt-4 accent-text">— Trevor Schmidt, Former Colleague</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="research" class="mb-16">
+             <div class="card text-center">
+                <h2 class="text-3xl font-bold accent-text mb-4">Research & Publications: A Unique Foundation</h2>
+                <p class="text-lg text-gray-700 max-w-4xl mx-auto mb-4">
+                    A unique background in public health research demonstrates a foundation in data collection, analysis, and community-focused projects, adding a layer of analytical depth to my technical profile.
+                </p>
+                <p class="font-semibold text-gray-800">Acknowledged Contributor:</p>
+                <ul class="list-none space-y-1 text-gray-600 mt-2">
+                    <li><a href="https://link.springer.com/article/10.1007/s10903-006-9017-y" class="hover:highlight-text underline" target="_blank">Determinants of influenza vaccination among undocumented immigrant populations...</a> (Journal of Immigrant and Minority Health, 2007)</li>
+                    <li>Rapid Vaccine Distribution in Non-Traditional Settings... (Presented at APHA Annual Meeting, 2005)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="ambition" class="mb-16">
+             <div class="accent-bg text-white rounded-lg p-8 text-center shadow-2xl">
+                <h2 class="text-3xl font-bold mb-4">Ambition: The Path Forward</h2>
+                <p class="text-xl max-w-4xl mx-auto text-blue-100">
+                    To leverage my unique blend of deep technical experience and modern engineering skills to lead and architect secure, scalable, and user-centric endpoint environments. My goal is to move beyond solving individual problems and focus on designing the systems and automation that prevent those problems from ever occurring.
+                </p>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12">
+            <p>Infographic generated for Charles Vasquez | July 2025</p>
+        </footer>
+
+    </div>
+</body>
+</html>
