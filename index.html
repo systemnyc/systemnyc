@@ -92,8 +92,10 @@
             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Multi-Disciplinary Expertise</h2>
             <div class="card">
                 <p class="text-center text-gray-600 mb-4">A visualization of core competencies, built upon two decades of experience and continuous learning.</p>
-                <div class="relative w-full max-w-lg mx-auto" style="height: 400px;">
-                    <canvas id="expertiseRadarChart"></canvas>
+                <div class="w-full flex justify-center">
+                    <div class="relative h-[450px] w-full max-w-xl">
+                        <canvas id="expertiseRadarChart"></canvas>
+                    </div>
                 </div>
             </div>
         </section>
@@ -218,6 +220,7 @@
                     }]
                 },
                 options: {
+                    responsive: true,
                     maintainAspectRatio: false,
                     scales: {
                         r: {
