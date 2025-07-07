@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -35,32 +34,42 @@
         .accent-bg { background-color: #007ACC; }
         .accent-text { color: #007ACC; }
         .highlight-text { color: #00BFFF; }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 400px;
-            max-height: 50vh;
-        }
-        .course-item {
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #e5e7eb;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
         }
-        .course-item:last-child {
-            border-bottom: none;
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
         }
-        .grade-badge {
-            background-color: #dcfce7;
-            color: #166534;
-            font-weight: 600;
-            padding: 0.125rem 0.5rem;
-            border-radius: 9999px;
-            font-size: 0.8rem;
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            max-width: 90%;
+            width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+        .skill-icon {
+            font-size: 2.5rem;
+            line-height: 1;
         }
     </style>
 </head>
@@ -85,9 +94,31 @@
         <section id="skills-overview" class="mb-16">
             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Multi-Disciplinary Expertise</h2>
             <div class="card">
-                <p class="text-center text-gray-600 mb-4">A visualization of core competencies, built upon two decades of experience and continuous learning.</p>
-                <div class="relative mx-auto" style="height:450px; width:100%; max-width:500px;">
-                    <canvas id="expertiseRadarChart"></canvas>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-4">
+                        <div class="skill-icon accent-text">💻</div>
+                        <h3 class="text-lg font-bold mt-2">Endpoint Engineering</h3>
+                    </div>
+                    <div class="p-4">
+                        <div class="skill-icon accent-text">🛡️</div>
+                        <h3 class="text-lg font-bold mt-2">Cybersecurity & Identity</h3>
+                    </div>
+                    <div class="p-4">
+                        <div class="skill-icon accent-text">☁️</div>
+                        <h3 class="text-lg font-bold mt-2">Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="p-4">
+                        <div class="skill-icon accent-text">⚙️</div>
+                        <h3 class="text-lg font-bold mt-2">Automation & Development</h3>
+                    </div>
+                    <div class="p-4">
+                        <div class="skill-icon accent-text">🏆</div>
+                        <h3 class="text-lg font-bold mt-2">Project Leadership</h3>
+                    </div>
+                    <div class="p-4">
+                        <div class="skill-icon accent-text">🧠</div>
+                        <h3 class="text-lg font-bold mt-2">AI & Data Science</h3>
+                    </div>
                 </div>
             </div>
         </section>
@@ -222,7 +253,7 @@
                 </div>
                 <div class="card italic border-l-4 border-blue-400">
                     <p>"Charles was always happy to <strong>share his experience with me</strong>, as I was coming in to the field with little practical experience of my own. Charles is a highly skilled and knowledgeable IT professional."</p>
-                     <p class="text-right font-bold not-italic mt-4 accenat-text">— Trevor Schmidt, Former Colleague</p>
+                     <p class="text-right font-bold not-italic mt-4 accent-text">— Trevor Schmidt, Former Colleague</p>
                 </div>
             </div>
         </section>
@@ -258,75 +289,77 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const radarCtx = document.getElementById('expertiseRadarChart').getContext('2d');
-            const expertiseRadarChart = new Chart(radarCtx, {
-                type: 'radar',
-                data: {
-                    labels: [
-                        'Endpoint Engineering', 
-                        'Cybersecurity & Identity', 
-                        'Cloud & Infrastructure', 
-                        'Automation & Development', 
-                        'Project Leadership',
-                        'AI & Data Science'
-                    ],
-                    datasets: [{
-                        label: 'Expertise Level',
-                        data: [5, 5, 5, 5, 4, 5],
-                        backgroundColor: 'rgba(0, 191, 255, 0.2)',
-                        borderColor: 'rgba(0, 122, 204, 1)',
-                        pointBackgroundColor: 'rgba(0, 122, 204, 1)',
-                        pointBorderColor: '#fff',
-                        pointHoverBackgroundColor: '#fff',
-                        pointHoverBorderColor: 'rgba(0, 122, 204, 1)'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        r: {
-                            angleLines: {
-                                color: 'rgba(0, 0, 0, 0.1)'
-                            },
-                            grid: {
-                                color: 'rgba(0, 0, 0, 0.1)'
-                            },
-                            pointLabels: {
-                                font: {
-                                    size: 14,
-                                    weight: 'bold'
-                                },
-                                color: '#005f99'
-                            },
-                            ticks: {
-                                backdropColor: 'rgba(255, 255, 255, 0.75)',
-                                stepSize: 1,
-                                max: 5,
-                                min: 0
-                            }
-                        }
+            const radarCtx = document.getElementById('expertiseRadarChart');
+            if (radarCtx) {
+                const expertiseRadarChart = new Chart(radarCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: [
+                            'Endpoint Engineering', 
+                            'Cybersecurity & Identity', 
+                            'Cloud & Infrastructure', 
+                            'Automation & Development', 
+                            'Project Leadership',
+                            'AI & Data Science'
+                        ],
+                        datasets: [{
+                            label: 'Expertise Level',
+                            data: [5, 4, 4, 5, 4, 4],
+                            backgroundColor: 'rgba(0, 191, 255, 0.2)',
+                            borderColor: 'rgba(0, 122, 204, 1)',
+                            pointBackgroundColor: 'rgba(0, 122, 204, 1)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'rgba(0, 122, 204, 1)'
+                        }]
                     },
-                    plugins: {
-                        legend: {
-                            display: false
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                angleLines: {
+                                    color: 'rgba(0, 0, 0, 0.1)'
+                                },
+                                grid: {
+                                    color: 'rgba(0, 0, 0, 0.1)'
+                                },
+                                pointLabels: {
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    },
+                                    color: '#005f99'
+                                },
+                                ticks: {
+                                    backdropColor: 'rgba(255, 255, 255, 0.75)',
+                                    stepSize: 1,
+                                    max: 5,
+                                    min: 0
+                                }
+                            }
                         },
-                        tooltip: {
-                            callbacks: {
-                                title: function(tooltipItems) {
-                                    const item = tooltipItems[0];
-                                    let label = item.chart.data.labels[item.dataIndex];
-                                    if (Array.isArray(label)) {
-                                      return label.join(' ');
-                                    } else {
-                                      return label;
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: function(tooltipItems) {
+                                        const item = tooltipItems[0];
+                                        let label = item.chart.data.labels[item.dataIndex];
+                                        if (Array.isArray(label)) {
+                                          return label.join(' ');
+                                        } else {
+                                          return label;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-            });
+                });
+            }
 
             const modal = document.getElementById('details-modal');
             const modalTitle = document.getElementById('modal-title');
