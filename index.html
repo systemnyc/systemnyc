@@ -27,9 +27,10 @@
             display: flex;
             flex-direction: column;
         }
-        .card:hover {
+        .clickable-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            cursor: pointer;
         }
         .accent-bg { background-color: #007ACC; }
         .accent-text { color: #007ACC; }
@@ -43,23 +44,38 @@
             height: 400px;
             max-height: 50vh;
         }
-        .course-item {
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #e5e7eb;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
         }
-        .course-item:last-child {
-            border-bottom: none;
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
         }
-        .grade-badge {
-            background-color: #dcfce7;
-            color: #166534;
-            font-weight: 600;
-            padding: 0.125rem 0.5rem;
-            border-radius: 9999px;
-            font-size: 0.8rem;
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            max-width: 90%;
+            width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
         }
     </style>
 </head>
@@ -91,111 +107,6 @@
             </div>
         </section>
         
-        <section id="skills-detail" class="mb-16">
-             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Technical Arsenal: A Commitment to Mastery</h2>
-             <p class="text-center text-gray-600 mb-8 -mt-4">A curated list of key specializations, certifications, and high-achievement coursework.</p>
-             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                 <div class="card">
-                     <h3 class="text-xl font-bold mb-3 text-center accent-text">Cybersecurity & Identity</h3>
-                     <div class="flex-grow">
-                        <div class="course-item">
-                            <span class="font-semibold">Microsoft Cybersecurity Analyst</span> <span class="text-sm text-gray-500 font-bold highlight-text">In Progress</span>
-                        </div>
-                        <div class="course-item">
-                            <a href="https://www.credly.com/badges/2495e3c8-220b-46a9-8fc4-08ff6ab4b3b3" target="_blank" class="font-semibold hover:highlight-text">CompTIA Security+</a> <span class="grade-badge">Certified</span>
-                        </div>
-                         <div class="course-item">
-                            <a href="https://www.credly.com/badges/6b5bd279-4f57-4e5c-9f85-2bdd5937e4bc" target="_blank" class="font-semibold hover:highlight-text">Azure AD Identity Solutions</a> <span class="grade-badge">97.5%</span>
-                        </div>
-                        <div class="course-item">
-                            <a href="https://www.credly.com/badges/6a5e831f-7156-40c1-a47e-98fc9d1a08cc" target="_blank" class="font-semibold hover:highlight-text">Cybersecurity Threat Vectors</a> <span class="grade-badge">98.3%</span>
-                        </div>
-                         <div class="course-item">
-                            <a href="https://www.credly.com/users/charlesvasquez-nyc/badges" target="_blank" class="font-semibold hover:highlight-text">Google Cybersecurity</a> <span class="grade-badge">96.2%</span>
-                        </div>
-                     </div>
-                 </div>
-                 <div class="card">
-                     <h3 class="text-xl font-bold mb-3 text-center accent-text">Endpoint & Cloud Management</h3>
-                     <div class="flex-grow">
-                        <div class="course-item">
-                            <a href="https://www.credly.com/badges/7af6b196-ea14-48f6-8d4b-869124a85a8d" target="_blank" class="font-semibold hover:highlight-text">Jamf Certified Associate</a> <span class="grade-badge">Certified</span>
-                        </div>
-                        <div class="course-item">
-                            <span class="font-semibold">Intune (MDM/MAM) with Hands On</span> <span class="text-sm text-gray-500">Udemy</span>
-                        </div>
-                        <div class="course-item">
-                            <a href="https://www.credly.com/badges/089587f2-154d-4c18-bfaf-bf862ae3445e" target="_blank" class="font-semibold hover:highlight-text">Microsoft Azure Fundamentals</a> <span class="grade-badge">Certified</span>
-                        </div>
-                        <div class="course-item">
-                            <span class="font-semibold">Learning Microsoft Config Mgr</span> <span class="text-sm text-gray-500">LinkedIn</span>
-                        </div>
-                        <div class="course-item">
-                            <a href="https://www.credly.com/badges/80e7bf35-ef49-4a80-95b5-f50ba0dd6223" target="_blank" class="font-semibold hover:highlight-text">Config Management & Cloud</a> <span class="grade-badge">89%</span>
-                        </div>
-                     </div>
-                 </div>
-                 <div class="card">
-                     <h3 class="text-xl font-bold mb-3 text-center accent-text">Automation & Development</h3>
-                     <div class="flex-grow">
-                        <div class="course-item">
-                            <a href="https://www.credly.com/badges/6856ec87-7c61-4bfc-b796-da415651be81" target="_blank" class="font-semibold hover:highlight-text">Google IT Automation w/ Python</a> <span class="grade-badge">Specialization</span>
-                        </div>
-                        <div class="course-item">
-                            <a href="https://www.credly.com/badges/f848fa03-1ae1-4ccb-8e78-c87018267936" target="_blank" class="font-semibold hover:highlight-text">Crash Course on Python</a> <span class="grade-badge">100%</span>
-                        </div>
-                        <div class="course-item">
-                           <span class="font-semibold">PowerShell & Graph API</span> <span class="text-sm text-gray-500">Project-Based</span>
-                        </div>
-                        <div class="course-item">
-                            <a href="https://www.credly.com/badges/e02b05e7-ab7b-47a7-808a-4b052c8c255f" target="_blank" class="font-semibold hover:highlight-text">Intro to Git & GitHub</a> <span class="grade-badge">93.3%</span>
-                        </div>
-                        <div class="course-item">
-                           <span class="font-semibold">Java FullStack Development</span> <span class="text-sm text-gray-500">Per Scholas</span>
-                        </div>
-                     </div>
-                 </div>
-                 <div class="card md:col-span-3">
-                     <h3 class="text-xl font-bold mb-3 text-center accent-text">AI, Data & Machine Learning</h3>
-                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8">
-                        <div>
-                            <p class="font-semibold text-gray-500 text-sm uppercase tracking-wider mb-2">Google</p>
-                            <div class="course-item">
-                                <a href="https://www.credly.com/badges/23d756d8-dafe-4ba4-b419-d55fc0a39aeb" target="_blank" class="font-semibold hover:highlight-text">AI Essentials</a> <span class="grade-badge">92%</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="font-semibold text-gray-500 text-sm uppercase tracking-wider mb-2">Microsoft Azure AI</p>
-                            <div class="course-item">
-                                <span class="font-semibold">Azure AI Fundamentals</span> <span class="grade-badge">Trophy</span>
-                            </div>
-                             <div class="course-item">
-                                <span class="font-semibold">Generative AI</span> <span class="grade-badge">Trophy</span>
-                            </div>
-                             <div class="course-item">
-                                <span class="font-semibold">Computer Vision</span> <span class="grade-badge">Trophy</span>
-                            </div>
-                        </div>
-                        <div>
-                             <p class="font-semibold text-gray-500 text-sm uppercase tracking-wider mb-2">IBM</p>
-                            <div class="course-item">
-                                <span class="font-semibold">AI Fundamentals</span> <span class="text-sm text-gray-500">SkillsBuild</span>
-                            </div>
-                            <div class="course-item">
-                                <span class="font-semibold">Big Data / Fabric</span> <span class="text-sm text-gray-500">SkillsBuild</span>
-                            </div>
-                            <div class="course-item">
-                                <span class="font-semibold">Hadoop & Spark</span> <span class="text-sm text-gray-500">SkillsBuild</span>
-                            </div>
-                        </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="text-center mt-8">
-                <a href="https://learn.microsoft.com/en-us/users/vasquezcharles-7689/achievements" target="_blank" rel="noopener noreferrer" class="inline-block accent-bg text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity shadow-lg">View All 100+ Microsoft Achievements</a>
-             </div>
-        </section>
-
         <section id="projects" class="mb-16">
             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Key Projects & Strategic Impact</h2>
              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -220,24 +131,25 @@
 
         <section id="journey" class="mb-16">
             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Career Journey: A Legacy of Impact</h2>
+            <p class="text-center text-gray-600 mb-8 -mt-4">Click on any role to see more details.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card">
+                <div class="card clickable-card" data-title="Desktop Support Specialist II @ Mount Sinai" data-details="<ul><li class='mb-2'>Provided mission-critical Tier 2 support to clinical and administrative staff, consistently meeting SLA standards.</li><li class='mb-2'>Collaborated with clinical staff to re-engineer and improve EPIC payment processing workflows, resulting in a 95% processing time improvement.</li><li class='mb-2'>Actively cross-training with the Endpoint Engineering team, contributing to Windows 11 testing and rollout while acquiring expertise in Microsoft Intune.</li><li class='mb-2'>Successfully coordinated the complex relocation of the Emergency Department's Charge Nurse Station with minimal disruption to patient care.</li></ul>">
                     <p class="font-bold highlight-text">2023 - Present</p>
                     <h3 class="text-xl font-bold mt-1">Desktop Support Specialist II</h3>
                     <p class="text-gray-600 font-medium">Mount Sinai Health System</p>
-                    <p class="mt-2 text-gray-700">Providing mission-critical Tier 2 support in a clinical environment. Collaborating to improve EPIC payment processing by 95%. Actively cross-training with Endpoint Engineering, contributing to Windows 11 rollout and mastering Intune.</p>
+                    <p class="mt-2 text-gray-700 flex-grow">Providing mission-critical Tier 2 support in a clinical environment and actively cross-training with Endpoint Engineering.</p>
                 </div>
-                <div class="card">
+                <div class="card clickable-card" data-title="IT Leadership & Consulting @ PCS / Supremo" data-details="<ul><li class='mb-2'>As Director of Retail Technology, spearheaded all IT operations across 16 grocery store locations in NJ and PA.</li><li class='mb-2'>Led critical infrastructure upgrades to servers, including SQL servers and NCR/ACME POS systems, ensuring minimal business disruption.</li><li class='mb-2'>Implemented a real-time ticketing system to dramatically improve IT support response times and tracking efficiency.</li><li class='mb-2'>Provided 24/7 on-call support to global endpoints and managed volume licensing agreements with vendors to ensure best pricing.</li></ul>">
                     <p class="font-bold highlight-text">2017 - 2022</p>
                     <h3 class="text-xl font-bold mt-1">IT Leadership & Consulting</h3>
                     <p class="text-gray-600 font-medium">PCS, LLC & Supremo Foods</p>
-                    <p class="mt-2 text-gray-700">As Director of Retail Technology, spearheaded IT operations for 16 grocery stores. Led server upgrades (SQL, POS), implemented ticketing systems, and provided 24/7 global support.</p>
+                    <p class="mt-2 text-gray-700 flex-grow">As Director of Retail Technology, spearheaded IT operations for 16 grocery stores, leading server upgrades and implementing new support systems.</p>
                 </div>
-                <div class="card">
+                <div class="card clickable-card" data-title="Systems Administrator @ Symphony Space" data-details="<ul><li class='mb-2'>Provided comprehensive IT support, from troubleshooting hardware/software to onboarding new users and managing accounts.</li><li class='mb-2'>Maintained essential infrastructure, including Windows servers, Active Directory, Exchange, network devices, and Mac workstations.</li><li class='mb-2'>Implemented security measures, including firewall configuration, intrusion monitoring, and led the remediation of a botnet infection.</li><li class='mb-2'>Successfully integrated Mac users into the Windows domain, supported Adobe Creative Suite, and managed backups.</li><li class='mb-2'>Demonstrated critical problem-solving by resolving a dual-brain domain controller issue affecting email delivery.</li></ul>">
                     <p class="font-bold highlight-text">2012 - 2017</p>
                     <h3 class="text-xl font-bold mt-1">Corporate & Non-Profit IT Mgmt</h3>
-                    <p class="text-gray-600 font-medium">Symphony Space & America's Food Basket</p>
-                    <p class="mt-2 text-gray-700">Maintained diverse infrastructure (Windows/Mac, Exchange, network devices). Implemented security measures and gained deep experience integrating Macs into a Windows domain.</p>
+                    <p class="text-gray-600 font-medium">Symphony Space</p>
+                    <p class="mt-2 text-gray-700 flex-grow">Maintained diverse infrastructure, implemented security measures, and gained deep experience integrating Macs into a Windows domain.</p>
                 </div>
             </div>
         </section>
@@ -276,7 +188,17 @@
         <footer class="text-center text-gray-500 text-sm mt-12">
             <p>Infographic generated for Charles Vasquez | July 2025</p>
         </footer>
+    </div>
 
+    <div id="details-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold accent-text">Role Details</h3>
+                <button id="modal-close-btn" class="text-gray-500 hover:text-gray-800 text-3xl">&times;</button>
+            </div>
+            <div id="modal-body" class="prose max-w-none">
+            </div>
+        </div>
     </div>
 
     <script>
@@ -294,7 +216,7 @@
                 ],
                 datasets: [{
                     label: 'Expertise Level',
-                    data: [5, 5, 5, 5, 4, 5],
+                    data: [5, 4, 4, 5, 4, 4],
                     backgroundColor: 'rgba(0, 191, 255, 0.2)',
                     borderColor: 'rgba(0, 122, 204, 1)',
                     pointBackgroundColor: 'rgba(0, 122, 204, 1)',
@@ -346,6 +268,34 @@
                         }
                     }
                 }
+            }
+        });
+
+        const modal = document.getElementById('details-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const clickableCards = document.querySelectorAll('.clickable-card');
+
+        clickableCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.getAttribute('data-title');
+                const details = card.getAttribute('data-details');
+                
+                modalTitle.innerText = title;
+                modalBody.innerHTML = details;
+                modal.classList.add('active');
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+        };
+
+        modalCloseBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
             }
         });
     </script>
