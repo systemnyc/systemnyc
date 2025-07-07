@@ -202,101 +202,103 @@
     </div>
 
     <script>
-        const radarCtx = document.getElementById('expertiseRadarChart').getContext('2d');
-        const expertiseRadarChart = new Chart(radarCtx, {
-            type: 'radar',
-            data: {
-                labels: [
-                    'Endpoint Engineering', 
-                    'Cybersecurity & Identity', 
-                    'Cloud & Infrastructure', 
-                    'Automation & Development', 
-                    'Project Leadership',
-                    'AI & Data Science'
-                ],
-                datasets: [{
-                    label: 'Expertise Level',
-                    data: [5, 4, 4, 5, 4, 4],
-                    backgroundColor: 'rgba(0, 191, 255, 0.2)',
-                    borderColor: 'rgba(0, 122, 204, 1)',
-                    pointBackgroundColor: 'rgba(0, 122, 204, 1)',
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: 'rgba(0, 122, 204, 1)'
-                }]
-            },
-            options: {
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        angleLines: {
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)'
-                        },
-                        pointLabels: {
-                            font: {
-                                size: 14,
-                                weight: 'bold'
-                            },
-                            color: '#005f99'
-                        },
-                        ticks: {
-                            backdropColor: 'rgba(255, 255, 255, 0.75)',
-                            stepSize: 1,
-                            max: 5,
-                            min: 0
-                        }
-                    }
+        document.addEventListener('DOMContentLoaded', function() {
+            const radarCtx = document.getElementById('expertiseRadarChart').getContext('2d');
+            const expertiseRadarChart = new Chart(radarCtx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'Endpoint Engineering', 
+                        'Cybersecurity & Identity', 
+                        'Cloud & Infrastructure', 
+                        'Automation & Development', 
+                        'Project Leadership',
+                        'AI & Data Science'
+                    ],
+                    datasets: [{
+                        label: 'Expertise Level',
+                        data: [5, 4, 4, 5, 4, 4],
+                        backgroundColor: 'rgba(0, 191, 255, 0.2)',
+                        borderColor: 'rgba(0, 122, 204, 1)',
+                        pointBackgroundColor: 'rgba(0, 122, 204, 1)',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: 'rgba(0, 122, 204, 1)'
+                    }]
                 },
-                plugins: {
-                    legend: {
-                        display: false
+                options: {
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            },
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.1)'
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                color: '#005f99'
+                            },
+                            ticks: {
+                                backdropColor: 'rgba(255, 255, 255, 0.75)',
+                                stepSize: 1,
+                                max: 5,
+                                min: 0
+                            }
+                        }
                     },
-                    tooltip: {
-                        callbacks: {
-                            title: function(tooltipItems) {
-                                const item = tooltipItems[0];
-                                let label = item.chart.data.labels[item.dataIndex];
-                                if (Array.isArray(label)) {
-                                  return label.join(' ');
-                                } else {
-                                  return label;
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-        });
-
-        const modal = document.getElementById('details-modal');
-        const modalTitle = document.getElementById('modal-title');
-        const modalBody = document.getElementById('modal-body');
-        const modalCloseBtn = document.getElementById('modal-close-btn');
-        const clickableCards = document.querySelectorAll('.clickable-card');
-
-        clickableCards.forEach(card => {
-            card.addEventListener('click', () => {
-                const title = card.getAttribute('data-title');
-                const details = card.getAttribute('data-details');
-                
-                modalTitle.innerText = title;
-                modalBody.innerHTML = details;
-                modal.classList.add('active');
             });
-        });
 
-        const closeModal = () => {
-            modal.classList.remove('active');
-        };
+            const modal = document.getElementById('details-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            const clickableCards = document.querySelectorAll('.clickable-card');
 
-        modalCloseBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                closeModal();
-            }
+            clickableCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const title = card.getAttribute('data-title');
+                    const details = card.getAttribute('data-details');
+                    
+                    modalTitle.innerText = title;
+                    modalBody.innerHTML = details;
+                    modal.classList.add('active');
+                });
+            });
+
+            const closeModal = () => {
+                modal.classList.remove('active');
+            };
+
+            modalCloseBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            });
         });
     </script>
 </body>
