@@ -35,15 +35,6 @@
         .accent-bg { background-color: #007ACC; }
         .accent-text { color: #007ACC; }
         .highlight-text { color: #00BFFF; }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 400px;
-            max-height: 50vh;
-        }
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -101,7 +92,7 @@
             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Multi-Disciplinary Expertise</h2>
             <div class="card">
                 <p class="text-center text-gray-600 mb-4">A visualization of core competencies, built upon two decades of experience and continuous learning.</p>
-                <div class="chart-container">
+                <div class="relative w-full h-96 max-w-lg mx-auto">
                     <canvas id="expertiseRadarChart"></canvas>
                 </div>
             </div>
