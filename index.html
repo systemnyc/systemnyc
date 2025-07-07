@@ -35,38 +35,32 @@
         .accent-bg { background-color: #007ACC; }
         .accent-text { color: #007ACC; }
         .highlight-text { color: #00BFFF; }
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 50vh;
+        }
+        .course-item {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            z-index: 50;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
         }
-        .modal-overlay.active {
-            opacity: 1;
-            pointer-events: auto;
+        .course-item:last-child {
+            border-bottom: none;
         }
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.75rem;
-            max-width: 90%;
-            width: 600px;
-            max-height: 90vh;
-            overflow-y: auto;
-            transform: scale(0.95);
-            transition: transform 0.3s ease;
-        }
-        .modal-overlay.active .modal-content {
-            transform: scale(1);
+        .grade-badge {
+            background-color: #dcfce7;
+            color: #166534;
+            font-weight: 600;
+            padding: 0.125rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -92,14 +86,82 @@
             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Multi-Disciplinary Expertise</h2>
             <div class="card">
                 <p class="text-center text-gray-600 mb-4">A visualization of core competencies, built upon two decades of experience and continuous learning.</p>
-                <div class="w-full flex justify-center">
-                    <div class="relative w-full max-w-xl" style="height: 450px;">
-                        <canvas id="expertiseRadarChart"></canvas>
-                    </div>
+                <div class="relative mx-auto" style="height:450px; width:100%; max-width:500px;">
+                    <canvas id="expertiseRadarChart"></canvas>
                 </div>
             </div>
         </section>
         
+        <section id="skills-detail" class="mb-16">
+             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Technical Arsenal: A Commitment to Mastery</h2>
+             <p class="text-center text-gray-600 mb-8 -mt-4">A curated list of key specializations, certifications, and high-achievement coursework.</p>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <div class="card">
+                     <h3 class="text-xl font-bold mb-3 text-center accent-text">Cybersecurity & Identity</h3>
+                     <div class="flex-grow">
+                        <div class="course-item">
+                            <span class="font-semibold">Microsoft Cybersecurity Analyst</span> <span class="text-sm text-gray-500 font-bold highlight-text">In Progress</span>
+                        </div>
+                        <div class="course-item">
+                            <a href="https://www.credly.com/badges/2495e3c8-220b-46a9-8fc4-08ff6ab4b3b3" target="_blank" class="font-semibold hover:highlight-text">CompTIA Security+</a> <span class="grade-badge">Certified</span>
+                        </div>
+                         <div class="course-item">
+                            <a href="https://www.credly.com/badges/6b5bd279-4f57-4e5c-9f85-2bdd5937e4bc" target="_blank" class="font-semibold hover:highlight-text">Azure AD Identity Solutions</a> <span class="grade-badge">97.5%</span>
+                        </div>
+                        <div class="course-item">
+                            <a href="https://www.credly.com/badges/6a5e831f-7156-40c1-a47e-98fc9d1a08cc" target="_blank" class="font-semibold hover:highlight-text">Cybersecurity Threat Vectors</a> <span class="grade-badge">98.3%</span>
+                        </div>
+                         <div class="course-item">
+                            <a href="https://www.credly.com/users/charlesvasquez-nyc/badges" target="_blank" class="font-semibold hover:highlight-text">Google Cybersecurity</a> <span class="grade-badge">96.2%</span>
+                        </div>
+                     </div>
+                 </div>
+                 <div class="card">
+                     <h3 class="text-xl font-bold mb-3 text-center accent-text">Endpoint & Cloud Management</h3>
+                     <div class="flex-grow">
+                        <div class="course-item">
+                            <a href="https://www.credly.com/badges/7af6b196-ea14-48f6-8d4b-869124a85a8d" target="_blank" class="font-semibold hover:highlight-text">Jamf Certified Associate</a> <span class="grade-badge">Certified</span>
+                        </div>
+                        <div class="course-item">
+                            <span class="font-semibold">Intune (MDM/MAM) with Hands On</span> <span class="text-sm text-gray-500">Udemy</span>
+                        </div>
+                        <div class="course-item">
+                            <a href="https://www.credly.com/badges/089587f2-154d-4c18-bfaf-bf862ae3445e" target="_blank" class="font-semibold hover:highlight-text">Microsoft Azure Fundamentals</a> <span class="grade-badge">Certified</span>
+                        </div>
+                        <div class="course-item">
+                            <span class="font-semibold">Learning Microsoft Config Mgr</span> <span class="text-sm text-gray-500">LinkedIn</span>
+                        </div>
+                        <div class="course-item">
+                            <a href="https://www.credly.com/badges/80e7bf35-ef49-4a80-95b5-f50ba0dd6223" target="_blank" class="font-semibold hover:highlight-text">Config Management & Cloud</a> <span class="grade-badge">89%</span>
+                        </div>
+                     </div>
+                 </div>
+                 <div class="card">
+                     <h3 class="text-xl font-bold mb-3 text-center accent-text">Automation & Development</h3>
+                     <div class="flex-grow">
+                        <div class="course-item">
+                            <a href="https://www.credly.com/badges/6856ec87-7c61-4bfc-b796-da415651be81" target="_blank" class="font-semibold hover:highlight-text">Google IT Automation w/ Python</a> <span class="grade-badge">Specialization</span>
+                        </div>
+                        <div class="course-item">
+                            <a href="http://credly.com/badges/f848fa03-1ae1-4ccb-8e78-c87018267936" target="_blank" class="font-semibold hover:highlight-text">Crash Course on Python</a> <span class="grade-badge">100%</span>
+                        </div>
+                        <div class="course-item">
+                           <span class="font-semibold">PowerShell & Graph API</span> <span class="text-sm text-gray-500">Project-Based</span>
+                        </div>
+                        <div class="course-item">
+                            <a href="https://www.credly.com/badges/e02b05e7-ab7b-47a7-808a-4b052c8c255f" target="_blank" class="font-semibold hover:highlight-text">Intro to Git & GitHub</a> <span class="grade-badge">93.3%</span>
+                        </div>
+                        <div class="course-item">
+                           <span class="font-semibold">Java FullStack Development</span> <span class="text-sm text-gray-500">Per Scholas</span>
+                        </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="text-center mt-8">
+                <a href="https://learn.microsoft.com/en-us/users/vasquezcharles-7689/achievements" target="_blank" rel="noopener noreferrer" class="inline-block accent-bg text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity shadow-lg">View All 100+ Microsoft Achievements</a>
+             </div>
+        </section>
+
         <section id="projects" class="mb-16">
             <h2 class="text-3xl font-bold accent-text mb-8 text-center">Key Projects & Strategic Impact</h2>
              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -160,7 +222,7 @@
                 </div>
                 <div class="card italic border-l-4 border-blue-400">
                     <p>"Charles was always happy to <strong>share his experience with me</strong>, as I was coming in to the field with little practical experience of my own. Charles is a highly skilled and knowledgeable IT professional."</p>
-                     <p class="text-right font-bold not-italic mt-4 accent-text">— Trevor Schmidt, Former Colleague</p>
+                     <p class="text-right font-bold not-italic mt-4 accenat-text">— Trevor Schmidt, Former Colleague</p>
                 </div>
             </div>
         </section>
@@ -210,7 +272,7 @@
                     ],
                     datasets: [{
                         label: 'Expertise Level',
-                        data: [5, 4, 4, 5, 4, 4],
+                        data: [5, 5, 5, 5, 4, 5],
                         backgroundColor: 'rgba(0, 191, 255, 0.2)',
                         borderColor: 'rgba(0, 122, 204, 1)',
                         pointBackgroundColor: 'rgba(0, 122, 204, 1)',
