@@ -13,6 +13,7 @@
 Driven IT professional committed to building a career in automation engineering. Leveraging my experience in IT infrastructure and my passion for learning, I'm actively developing the skills to streamline processes and create efficient solutions.
 
 ## **Certifications**
+- **Microsoft 365 Certified: Endpoint Engieer Associate** https://learn.microsoft.com/api/credentials/share/en-us/CharlesVasquez-MountSinai/9984B3F11CCE8062?sharingId=48EA6B30B424C12A
 - **JAMF Certified Associate:** https://www.credly.com/badges/f848fa03-1ae1-4ccb-8e78-c87018267936/public_url
 - **CompTIA Security+:** https://www.credly.com/badges/4b5a3c44-6660-4f1f-a164-2af098ba633d/linked_in_profile 
 - **Google IT Automation with Python:** https://www.coursera.org/account/accomplishments/professional-cert/304T8F49KWIL
